@@ -33,8 +33,8 @@ func (u *User) SetFirstName(firstName string) {
 }
 
 func ResetUser(u *User) {
-	u.firstName = ""
-	u.lastName = ""
+	u.SetFirstName("")
+	u.SetLastName("")
 }
 
 func isUser(i interface{}) bool {
