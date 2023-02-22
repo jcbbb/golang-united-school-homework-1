@@ -35,7 +35,7 @@ func ResetUser(u *User) {
 }
 
 func IsUser(i interface{}) bool {
-	_, ok := i.(*User)
+	_, ok := i.(User)
 	return ok
 }
 
