@@ -13,8 +13,8 @@ type User struct {
 	lastName  string
 }
 
-func New() *User {
-	return &User{}
+func New() User {
+	return User{}
 }
 
 func (u *User) FullName() string {
@@ -30,8 +30,8 @@ func (u *User) SetFirstName(firstName string) {
 }
 
 func ResetUser(u *User) {
-  (*u).lastName = ""
-  (*u).firstName = ""
+	(*u).lastName = ""
+	(*u).firstName = ""
 }
 
 func IsUser(i interface{}) bool {
