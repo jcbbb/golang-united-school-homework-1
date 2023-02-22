@@ -13,7 +13,7 @@ type User struct {
 	lastName  string
 }
 
-func NewUser(lastName, firstName string) *User {
+func New(lastName, firstName string) *User {
 	return &User{
 		lastName:  lastName,
 		firstName: firstName,
@@ -37,7 +37,7 @@ func ResetUser(u *User) {
 	u.SetLastName("")
 }
 
-func isUser(i interface{}) bool {
+func IsUser(i interface{}) bool {
 	_, ok := i.(*User)
 	return ok
 }
