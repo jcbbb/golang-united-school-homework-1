@@ -13,11 +13,8 @@ type User struct {
 	lastName  string
 }
 
-func New(lastName, firstName string) *User {
-	return &User{
-		lastName:  lastName,
-		firstName: firstName,
-	}
+func New() *User {
+	return &User{}
 }
 
 func (u *User) FullName() string {
@@ -32,7 +29,7 @@ func (u *User) SetFirstName(firstName string) {
 	u.firstName = firstName
 }
 
-func ResetUser(u *User) {
+func ResetUser(u User) {
 	u.SetFirstName("")
 	u.SetLastName("")
 }
